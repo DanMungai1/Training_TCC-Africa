@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Fundamentals of Statistics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dan Mungai" />
+    <meta name="date" content="2022-04-28" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Fundamentals of Statistics
+## Introduction to General Statistics
+### Dan Mungai
+### TCC - Africa
+### 2022-04-28
+
+---
+
+# Introduction
+### Statistics
+Statistics is the study and manipulation of data, including ways to sample, review, analyze, and draw inferences from data
+
+The science of data collection, organizing, analysis, interpretation and presentation or dissemination of information gained
+
+- Population - a collection of all outcomes, counts, responses, measurements of interest
+
+- Sample - a representative subset of a population
+
+- Parameters - attributes from all objects in a population
+
+- Statistic - Attributes from a sample
+
+---
+![my-greens](images/pop_sample.png)
+
+---
+# Descriptive Vs Inferential Statistics
+### Descriptives
+The organizing and summarizing of data by use of graphs and tables or numbers such as counts, means, medians, and modes
+
+Exploratory data Analysis falls under this category of statistics
+
+### Inferential Statistics
+Refers to formal probability methods of drawing conclusions about a population using a sample.
+
+Statistical inferences use probability to determine the level of confidence regarding the correctness of conclusions
+
+Probability is the measure of randomness dealing with the chance or likelihood of an event occurring. 
+
+With probability there is always a threshold from which we use to make our conclusions referred to as the critical or the alpha value. 
+---
+
+### Sampling Procedures and Methods
+
+#### Probability sampling methods
+
+- Random Sampling
+
+- Stratified Sampling
+
+- Clustered Sampling
+
+- Systematic Sampling
+
+- Multi-stage Sampling
+
+#### Non-probability sampling methods
+
+- Convenience Sampling
+
+- Consecutive Sampling
+
+- Purposive or Judgemental Sampling
+
+- Quota sampling 
+---
+# Data Collection Methods
+### Quantitative data collection methods
+Outcomes of counting or measuring which can be discrete or continuous
+
+continuous - 1.2, 3.4, 4.111
+
+discrete - 1, 2, 10, 1000000, 100, 1200
+
+#### Data collection methods
+- Experimental
+
+- Simulation
+
+- Survey
+ - A structured closed-ended interviews
+ - Closed ended surveys and questionnaires
+---
+### Qualitative data collection methods
+Categorizes or describes attributes of a population e.g poor, black, rich, short, small
+
+#### Collection Methods
+- Observation 
+- Focus groups, 
+- Observation
+- Written records and 
+- Individual interviews
+---
+# Data statistics
+## Mean
+The mean is the sum of all the values in a set, divided by the number of values. The mean of a whole population is usually denoted by µ, while the mean of a sample is usually denoted by x.
+
+## Median
+
+The median is the middle number of a set of numbers arranged in numerical order. If the number of values in a set is even, then the median is the sum of the two middle values, divided by 2.
+
+## Mode
+
+The mode is the most frequent value in a set. A set can have more than one mode; if it has two, it is said to be bimodal
+---
+# Dispersion
+
+## Range
+
+The range is the difference between the largest and smallest values of a set.
+
+## Variance
+
+The variance is a measure of how items are dispersed about their mean.
+
+## Standard Deviation
+
+The standard deviation σ (or s for a sample) is the square root of
+the variance.
+
+## Relative variability
+
+The relative variability of a set is its standard deviation divided by its mean. The relative variability is useful for comparing several variances.
+---
+# Parametric Vs Non Parametric Methods
+## Probility Distributions
+There are two most important probability distributions in statistics
+
+- Normal Distribution
+
+- t- Distribution 
+![distributions](images/normal-distrubution-large.svg)
+---
+Normal distribution, also known as the Gaussian distribution, is a probability distribution that is symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. In graph form, normal distribution will appear as a bell curve.
+
+![distributions](images/maxresdefault.jpg)
+---
+The T distribution, also known as the Student's t-distribution, is a type of probability distribution that is similar to the normal distribution with its bell shape but has heavier tails. T distributions have a greater chance for extreme values than normal distributions, hence the fatter tails.
+![distributions](images/t-distribution-comparison.png)
+---
+![distributions](images/f126.png)
+---
+## Central Limit Theorem
+The central limit theorem (CLT) states that the distribution of sample means approximates a normal distribution as the sample size gets larger, regardless of the population's distribution. Sample sizes equal to or greater than 30 are often considered sufficient for the CLT to hold.
+![distributions](images/Central-Limit-Theorem-CLT-Diagram.webp)
+---
+### Central Limit Theorem
+
+```r
+library(TeachingDemos)
+clt.examp(4)
+```
+
+![](index_files/figure-html/unnamed-chunk-1-1.png)&lt;!-- --&gt;
+---
+## Statistical Tests for Drawing Inferences from Data
+### Parametric Methods
+
+Parametric statistical methods are carried out when the data fulfills certain criteria
+ - Data must be Normally Distributed
+ 
+ - Data must be randomly sampled
+ 
+1. Student T-tests
+    - One sample T - tests
+    - Independent Two sample T - tests
+    - Paired T - test
+2. The Analysis of variance
+
+3. Chi-Squared tests
+    - Test of association/dependence
+    - Test of good fit
+4. Regression Analysis
+---
+## Non - Parametric Methods
+
+- Wilcoxon ranked sum test
+
+- Kruskal - Wallis
+
+- Fisher's exact test
+
+
+---
+
+# Determining or Detecting Normality of data Distribution
+
+1. Visual Method
+ - creation of histograms
+ - create a qqplot
+
+2. Formal statistical tests
+ - Perform a Shapiro-Wilk test
+ - Perform a Perform a Kolmogorov-Smirnov Test
+
+---
+
+# Handling Non-Normal Data
+
+1. Log Transformation: Transform the values from x to log(x).
+
+2. Square Root Transformation: Transform the values from x to √x.
+
+3. Cube Root Transformation: Transform the values from x to x1/3.
+
+---
+# Hypotheses Testing
+A hypothesis is a hunch, guess, clue or an idea about a certain scenario
+
+In statistics a hypothesis refers to a testable theory about data - A theory that can be falsified
+
+Null Hypothesis vs Alternate hypothesis
+
+### P values and critical values
+A p-value is a statistical measurement used to validate a hypothesis against observed data.
+
+There is always an established threshold for which a hypothesis is rejected or not rejected - The threshold is the critical value or the alpha value which is pre-determined or pre-provided
+
+The alpha value could be;
+- 10 %  == 0.01 ~ 90% confidence
+- 5% == 0.05 ~ 95 % confidence
+- 1% == 0.001 ~ 99% confidence
+
+---
+# Summary
+
+## It is important to know that data analysis and inferences using data analysis is a process that starts with the;
+
+ - Identification of the problem
+
+ - Statement of the problem
+
+ - Formulation of the objectives
+
+ - Formulation of the hypotheses
+---
+ - Illustration of the expected outcomes
+
+ - Formulation of data collection procedures and methods
+ 
+ - identification of data analysis methods and statistical tools and tests
+ 
+ - Drawing of inferences from the data 
+ 
+ - Communication of the results
+ 
+When any of the above process is broken it becomes very difficult to achieve the pre-determined objectives. 
+
+
+                              *THANK YOU*
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
