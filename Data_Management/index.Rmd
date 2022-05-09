@@ -19,37 +19,13 @@ options(htmltools.dir.version = FALSE)
 # Introduction
 Data management is the practice of collecting, keeping, and using data securely, efficiently, and cost-effectively.
 
-The goal of data management is to help people, organizations, and connected things optimize the use of data within the bounds of policy and regulation so that they can make decisions and take actions that maximize the benefit to the organization.
+- The goal of data management is to help people, organizations, and connected things optimize the use of data within the bounds of policy and regulation so that they can make decisions and take actions that maximize the benefit to the organization.
 
-A robust data management strategy is becoming more important than ever as organizations increasingly rely on intangible assets to create value.
----
-Data management has a wide scope, covering factors such as how to:
-
-- Create, access, and update data across a diverse data tier
-- Store data across multiple clouds and on premises
-- Provide high availability and disaster recovery
-- Use data in a growing variety of apps, analytics, and algorithms
-- Ensure data privacy and security
-- Archive and destroy data in accordance with retention schedules and compliance - requirements
-
-**Actions or practices that contribute to effective storage, preservation and use of data and documentation throughout the research cycle, production cycle, operational cycle of an organization or entity.**
+ **Actions or practices that contribute to effective storage, preservation and use of data and documentation throughout the research cycle, production cycle, operational cycle of an organization or entity.**
 ---
 background-image: url(images/data_life_cycle.webp)
 background-size: contain
 ---
-## Big data
-- Volume - Tremendous volumes - Petabytes
-
-- Velocity - creation, storage, visualization, analysis
-
-- Variety - Unstructured and structured
-
-## Big Data Libraries
-- Databases
-  - tidy tuesday
-  - Kaggle
----
-
 ### Research Data
 Recorded factual materials commonly accepted in the research community as necessary to validate research findings. 
 
@@ -69,8 +45,6 @@ Recorded factual materials commonly accepted in the research community as necess
  - changing storage formats
  - changing storage devices
 
- 
----
 ### Research Retraction
 
 #### Retraction watch
@@ -90,21 +64,6 @@ Research papers, journal articles are sometimes retracted due to data validity q
 
 4. Maximizes transparency and accountability
 
----
-
-## Related Issues
-- Creating a plan for data management
-
-- Managing data work flow
-
-- Using data management best practices
-
-- Creating consistent Metadata
-
-- Sharing and getting credit for ones work
-
-- Documenting Compliance
----
 ## Importance of well managed, Publicly Available data
 - Enables Scrutiny of research findings
 
@@ -137,23 +96,18 @@ Research papers, journal articles are sometimes retracted due to data validity q
 
 ---
 
-5. Government Websites eg IEBC, KNBS, KEBS
-
-6. DropBox (shared)
-
-7. Google drive (shared)
----
 ## Data Types
 
-### Numeric data
- - Continuous - 1, 5, 6 1.1, 3.6, 6.8, 4.1234
+### Numeric data/ Quantitative
+ - Continuous/ double - 1, 5, 6 1.1, 3.6, 6.8, 4.1234
  
  - Integers - 1, 2, 5, -1, -4, -6
  
-### Categorical Data
+### Categorical Data/ Qualitative data
+
  - Characters - boy, man, chair, school, oxygen, computer
  
- - Factors - male & female, tall, medium & tall, vaccinated & unvaccinated
+ - Factors - male & female, tall, medium & tall, vaccinated & vaccinated
  
     - Nominal - Un-ordered factors
  
