@@ -1,0 +1,117 @@
+---
+title: "General Statistics"
+author: "TCC"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+# Header 1
+
+
+## Header 2
+
+### Header 3
+
+```{r}
+# load data and packages
+library(tidyverse)
+library(gapminder)
+library(skimr)
+library(janitor)
+```
+
+## Exploration of data
+```{r}
+data("gapminder")
+summary(gapminder)
+skim(gapminder)
+dim(gapminder)
+```
+
+## Statistical Tests
+
+### ANOVA
+```{r}
+life_exp_anova <- aov(lifeExp ~ continent, data = gapminder)
+life_exp_anova
+
+summary(life_exp_anova)
+
+TukeyHSD(life_exp_anova)
+plot(TukeyHSD(life_exp_anova), las =1)
+```
+
+## T TEST
+```{r}
+library(readr)
+covid <- read_csv("WHO-COVID-19-global-data.csv")
+View(covid)
+
+df <- covid %>% filter(Country %in% c("Nigeria", "Kenya"))
+```
+
+```{r}
+t_test <- t.test(New_cases ~ Country, data = df)
+t_test
+```
+
+## Chisquare test
+```{r}
+library(readxl)
+library(janitor)
+Correct <- read_excel("Correct.xlsx")
+View(Correct)
+
+Correct <- Correct %>% clean_names()
+```
+
+
+```{r}
+data("airquality")
+boxplot(Ozone ~ Month, data = airquality)
+kruskal.test(Ozone ~ Month, data = airquality)
+```
+
+```{r}
+unique(Correct$county)
+unique(Correct$age_bracket)
+unique(Correct$portion_affected)
+```
+
+## grammar of tables
+```{r}
+library(gt)
+library(gtsummary)
+```
+
+## Summary Tables
+```{r}
+Correct %>% select(gender, age_bracket, county) %>% 
+  tbl_summary(by = county)
+```
+
+```{r}
+library(readr)
+Nigeria_soils <- read_csv("Nigeria_soils_data.csv")
+View(Nigeria_soils)
+```
+
+# GT TABLES
+
+```{r}
+Nigeria_soils %>% select(pH:Fe, project) %>% 
+  tbl_summary(by = project,
+              type = all_continuous() ~ "continuous",
+              statistic = all_continuous() ~ "{mean} ± {sd}")
+
+```
+

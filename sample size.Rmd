@@ -1,0 +1,17 @@
+---
+title: "Untitled"
+author: "TCC"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+sample_size = $(Z^2P*Q)/(e^2)$
+
+sample = $N/(1+N(e^2)$
+
+sample_size = $(Z@/2 *std-dev)/E$
